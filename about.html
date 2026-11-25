@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Project 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="aurora">
+  <div class="aurora" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">✦</span>
+        <span>Project 1</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="theme-switcher" role="group" aria-label="Color theme">
+        <button class="theme-dot active" data-set="aurora" title="Cosmic Aurora" aria-label="Cosmic Aurora theme"></button>
+        <button class="theme-dot" data-set="sunset" title="Solar Sunset" aria-label="Solar Sunset theme"></button>
+        <button class="theme-dot" data-set="emerald" title="Cyber Emerald" aria-label="Cyber Emerald theme"></button>
+        <button class="theme-dot" data-set="daylight" title="Crisp Daylight" aria-label="Crisp Daylight theme"></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="card" id="tilt-card">
+      <div class="top-bar">
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          <span>Behind the Craft</span>
+        </div>
+        <span class="status-pill" id="local-clock">--:--:--</span>
+      </div>
+
+      <span class="eyebrow">Our Philosophy</span>
+      <h1>Built with Wonder.</h1>
+
+      <p class="subtitle">
+        What started as a classic <code>"Hello, World!"</code> experiment grew into a tactile playground of glassmorphism, fluid light, and zero-dependency web craftsmanship.
+      </p>
+
+      <div class="stats-row" aria-label="Project highlights">
+        <div class="stat-box">
+          <div class="stat-value">0 KB</div>
+          <div class="stat-label">External Frameworks</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">60 FPS</div>
+          <div class="stat-label">Canvas Constellation</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">4 Themes</div>
+          <div class="stat-label">Synced Across Pages</div>
+        </div>
+      </div>
+
+      <div class="bento-grid">
+        <article class="bento-item">
+          <div class="bento-icon" aria-hidden="true">🎨</div>
+          <h3>Adaptive Glass UI</h3>
+          <p>Layered frosted surfaces, dynamic specular cursor highlights, and smooth theme transitions saved automatically across visits.</p>
+        </article>
+
+        <article class="bento-item">
+          <div class="bento-icon" aria-hidden="true">⚡</div>
+          <h3>Pure Web Standards</h3>
+          <p>Powered strictly by semantic HTML5, modern CSS custom properties, and vanilla JavaScript—fast, lightweight, and portable.</p>
+        </article>
+
+        <article class="bento-item">
+          <div class="bento-icon" aria-hidden="true">🌌</div>
+          <h3>Living Backdrop</h3>
+          <p>Real-time particle physics draw proximity constellations that adapt their contrast seamlessly between dark and daylight modes.</p>
+        </article>
+
+        <article class="bento-item">
+          <div class="bento-icon" aria-hidden="true">♿</div>
+          <h3>Thoughtful Motion</h3>
+          <p>Engineered with keyboard-friendly controls, clear focus states, and full respect for system reduced-motion preferences.</p>
+        </article>
+      </div>
+
+      <div class="actions">
+        <a href="contact.html" class="btn btn-primary">
+          <span>✉️</span>
+          <span>Get in Touch →</span>
+        </a>
+        <a href="index.html" class="btn btn-secondary">
+          <span>← Back to Home</span>
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <span>Project 1 · Crafted for the Modern Web</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

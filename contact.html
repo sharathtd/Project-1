@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Project 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="aurora">
+  <div class="aurora" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <canvas id="constellation" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">✦</span>
+        <span>Project 1</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+      </ul>
+
+      <div class="theme-switcher" role="group" aria-label="Color theme">
+        <button class="theme-dot active" data-set="aurora" title="Cosmic Aurora" aria-label="Cosmic Aurora theme"></button>
+        <button class="theme-dot" data-set="sunset" title="Solar Sunset" aria-label="Solar Sunset theme"></button>
+        <button class="theme-dot" data-set="emerald" title="Cyber Emerald" aria-label="Cyber Emerald theme"></button>
+        <button class="theme-dot" data-set="daylight" title="Crisp Daylight" aria-label="Crisp Daylight theme"></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="card" id="tilt-card">
+      <div class="top-bar">
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          <span>Available for Ideas</span>
+        </div>
+        <span class="status-pill" id="local-clock">--:--:--</span>
+      </div>
+
+      <span class="eyebrow">Say Hello</span>
+      <h1>Let's Connect.</h1>
+
+      <p class="subtitle">
+        Have a question, collaboration idea, or just want to send your own greeting back? Drop a note below and launch a signal.
+      </p>
+
+      <div class="contact-layout">
+        <form class="contact-form" id="contact-form">
+          <div class="field-group">
+            <label for="name">Your Name</label>
+            <input class="input-control" type="text" id="name" name="name" placeholder="Ada Lovelace" required />
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email Address</label>
+            <input class="input-control" type="email" id="email" name="email" placeholder="ada@analytical.engine" required />
+          </div>
+
+          <div class="field-group">
+            <label>Topic</label>
+            <div class="topic-chips" role="group" aria-label="Message topic">
+              <button type="button" class="topic-chip selected">General Hello</button>
+              <button type="button" class="topic-chip">New Project</button>
+              <button type="button" class="topic-chip">Design Feedback</button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="message">
+              <span>Message</span>
+              <span id="char-count">0 / 500</span>
+            </label>
+            <textarea class="input-control" id="message" name="message" maxlength="500" placeholder="Write something awesome..." required></textarea>
+          </div>
+
+          <div class="toast-banner" id="form-toast" role="status" aria-live="polite">
+            <span>🚀</span>
+            <span>Thanks! Your message has been sent into the constellation.</span>
+          </div>
+
+          <div class="actions" style="margin-top: 0.35rem;">
+            <button class="btn btn-primary" id="submit-btn" type="submit">
+              <span>✨</span>
+              <span>Send Message</span>
+            </button>
+            <a href="about.html" class="btn btn-secondary">
+              <span>← Back to About</span>
+            </a>
+          </div>
+        </form>
+
+        <aside class="contact-sidebar" aria-label="Direct contact channels">
+          <div class="info-tile">
+            <div class="info-tile-label">Direct Email</div>
+            <div class="info-tile-value">hello@project-one.dev</div>
+            <button type="button" class="copy-btn" id="copy-email-btn">Copy Address</button>
+          </div>
+
+          <div class="info-tile">
+            <div class="info-tile-label">Response Window</div>
+            <div class="info-tile-value">Within 24 Hours</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">
+              Monday – Friday · Global Async
+            </p>
+          </div>
+
+          <div class="info-tile">
+            <div class="info-tile-label">Quick Navigation</div>
+            <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.55;">
+              Return to the <a href="index.html" style="color: var(--accent-3); text-decoration: none; font-weight: 600;">Home greeting</a> or read more on the <a href="about.html" style="color: var(--accent-3); text-decoration: none; font-weight: 600;">About page</a>.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="footer-meta">
+        <span>Project 1 · Always Open to Conversation</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
